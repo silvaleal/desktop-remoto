@@ -24,31 +24,25 @@ class ControllerViews(discord.ui.View):
     async def furl(self, interaction: discord.Interaction, button: discord.ui.Button): 
         await interaction.response.send_modal(ControllerFoceUrl())
 
-    # Linha 1: navegação
     @discord.ui.button(label="↑", style=discord.ButtonStyle.secondary, row=1)
     async def up(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.callback(interaction, 'up')
+        await self.callback(interaction, 'mouse-up')
 
     @discord.ui.button(label="↓", style=discord.ButtonStyle.secondary, row=1)
     async def down(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.callback(interaction, 'down')
+        await self.callback(interaction, 'mouse-down')
 
     @discord.ui.button(label="←", style=discord.ButtonStyle.secondary, row=1)
     async def left(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.callback(interaction, 'left')
+        await self.callback(interaction, 'mouse-left')
 
     @discord.ui.button(label="→", style=discord.ButtonStyle.secondary, row=1)
     async def right(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.callback(interaction, 'right')
+        await self.callback(interaction, 'mouse-right')
 
-    # Linha 2: ações
     @discord.ui.button(label="OK", style=discord.ButtonStyle.primary, row=2)
     async def ok(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.callback(interaction, 'ok')
-
-    @discord.ui.button(label="Back", style=discord.ButtonStyle.danger, row=2)
-    async def back(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.callback(interaction, 'back')
+        await self.callback(interaction, 'mouse-ok')
     
 class ControllerFoceUrl(discord.ui.Modal, title="Force-URL"):
     def __init__(self):

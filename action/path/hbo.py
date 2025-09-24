@@ -1,5 +1,12 @@
-from action.path.pathBase import PathBase
+import webbrowser
+import pyautogui
+import time
 
-class HboPath(PathBase):
-    def __init__(self, path, url):
-        super().__init__(path, url)
+class HboPath:
+    def __init__(self, url):
+        self.url = url
+        
+    def run(self):
+        webbrowser.open(self.url)
+        time.sleep(3)
+        pyautogui.scroll(-3)

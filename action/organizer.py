@@ -3,6 +3,6 @@ from action.path.youtube import YouTube
 
 def _pathButtons():
     return {
-        'hbo': HboPath('hbo', 'https://play.hbomax.com/'),
-        'youtube': YouTube('youtube', 'https://youtube.com/'),
+        'hbo': HboPath('https://play.hbomax.com/'),
+        'youtube': YouTube('https://youtube.com/'),
     }
