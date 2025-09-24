@@ -1,7 +1,7 @@
 # desktop-remoto
 Projeto em python para controlar seu PC/Notebook pelo celular, usando um bot do discord.
 
-> Atenção, este projeto foi feito para praticar o uso do Redis, não foi planejado para ser uso no dia-a-dia
+> Atenção, este projeto foi feito para praticar o uso do Redis, não foi planejado para ser uso diário
 
 ## Tecnologias
 - REDIS (Canal: desktop-remoto)
