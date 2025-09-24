@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from ui.controller import ControllerViews
+from discordbot.ui.controller import ControllerViews
 
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
