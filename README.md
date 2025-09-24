@@ -6,6 +6,7 @@ Projeto em python para controlar seu PC/Notebook pelo celular, usando um bot do 
 ## Tecnologias
 - REDIS (Canal: desktop-remoto)
 - Python 3.12
+- Linux Mint 
 
 ## Teste você mesmo
 ```bash
