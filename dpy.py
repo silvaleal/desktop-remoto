@@ -9,7 +9,7 @@ async def on_ready():
     print(f"Logged in as {bot.user}")
 
 @bot.command()
-async def hello(ctx):
-    await ctx.send("Hello!",view=ControllerViews())
+async def controle(ctx):
+    await ctx.send("Controle!",view=ControllerViews())
 
-bot.run("MTM5MjEzNjY3MDAwNjA4MzY0NA.G80i0g.yWzzzSJoSXB2kITrWuQHDeabPaDNn2A6BXtiPc")
+bot.run("")

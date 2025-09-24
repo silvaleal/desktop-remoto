@@ -11,7 +11,7 @@ import json
 client = StrictRedis(host="localhost", port=6379)
 
 subscriber = client.pubsub()
-subscriber.psubscribe('channel_test')
+subscriber.psubscribe('desktop-remoto')
 
 while True:
     messages = subscriber.get_message()

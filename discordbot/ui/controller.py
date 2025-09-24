@@ -10,7 +10,7 @@ class ControllerViews(discord.ui.View):
     async def callback(self, interaction, path):
         await interaction.response.defer()
         data = {"path":path}
-        self.redis.publish('channel_test', str(data).replace('"', "'").replace("'", '"'))
+        self.redis.publish('desktop-remoto', str(data).replace('"', "'").replace("'", '"'))
         
     @discord.ui.button(label="HBO", style=discord.ButtonStyle.primary, row=0)
     async def hbo(self, interaction: discord.Interaction, button: discord.ui.Button):
@@ -57,4 +57,4 @@ class ControllerFoceUrl(discord.ui.Modal, title="Force-URL"):
     async def on_submit(self, interaction):
         await interaction.response.defer()
         data = {"url":self.url.value}
-        self.redis.publish('channel_test', str(data).replace('"', "'").replace("'", '"'))
+        self.redis.publish('desktop-remoto', str(data).replace('"', "'").replace("'", '"'))
