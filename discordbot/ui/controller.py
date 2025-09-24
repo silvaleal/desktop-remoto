@@ -43,6 +43,10 @@ class ControllerViews(discord.ui.View):
     @discord.ui.button(label="OK", style=discord.ButtonStyle.primary, row=2)
     async def ok(self, interaction: discord.Interaction, button: discord.ui.Button):
         await self.callback(interaction, 'mouse-ok')
+
+    @discord.ui.button(label="BACK", style=discord.ButtonStyle.red, row=2)
+    async def back(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await self.callback(interaction, 'mouse-back')
     
 class ControllerFoceUrl(discord.ui.Modal, title="Force-URL"):
     def __init__(self):

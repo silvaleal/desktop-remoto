@@ -1,6 +1,7 @@
 from redis import StrictRedis
 from time import strftime, sleep
 from action.organizer import _pathButtons
+from action.desktop.mouse import  Mouse
 import pyautogui
 import webbrowser
 import json
@@ -23,33 +24,7 @@ while True:
 
         if 'path' in data:
             if 'mouse' in data['path']:
-                direction = data['path'].split('-')[1]
-                posX, posY = pyautogui.position()
-                
-                print(posX, posY)
-                
-                if posY<=250:
-                    pyautogui.scroll(+3)
-                    pyautogui.moveTo(posX, posY+300)
-                    continue
-                
-                if direction == 'up':
-                    pyautogui.moveTo(posX, posY-100)
-                
-                if direction == 'down':
-                    pyautogui.moveTo(posX, posY+100)
-                
-                if direction == 'left':
-                    pyautogui.moveTo(posX-100, posY)
-                
-                if direction == 'right':
-                    pyautogui.moveTo(posX+100, posY)
-                
-                if posY>=650:
-                    pyautogui.scroll(-3)
-                    pyautogui.moveTo(posX, posY-300)
-                    continue
-                
+                Mouse(data)._control_()
                 continue
             
             if not data['path'] in _pathButtons():

@@ -1,5 +1,5 @@
-from action.path.hbo import HboPath
-from action.path.youtube import YouTube
+from action.applications.hbo import HboPath
+from action.applications.youtube import YouTube
 
 def _pathButtons():
     return {
