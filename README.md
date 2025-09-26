@@ -12,6 +12,7 @@ Projeto em python para controlar seu PC/Notebook pelo celular, usando um bot do 
 ```bash
 git clone https://github.com/silvaleal/desktop-remoto/
 cd desktop-remoto
+python -m venv venv
 python app.py   # Ligar em seu pc/notebook
 python dpy.py   # Ligar o bot (Coloque o token do bot)
 ```
